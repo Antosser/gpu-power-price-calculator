@@ -1,7 +1,6 @@
 import tkinter as tk
 import time
 import datetime
-from turtle import st
 import threading
 import gpupower
 
