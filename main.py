@@ -42,11 +42,11 @@ def handle_click(event):
         return
     starttime = datetime.datetime.now()
     tk.Label(frame, text=starttime.strftime("%Y-%m-%d %H:%M:%S")).pack()
-    tk.Label(frame, text='Used:').pack()
+    tk.Label(frame, text='Used:', background='white').pack()
     powerused.pack()
-    tk.Label(text='Price / kWh:')
+    tk.Label(frame, text='Price / kWh:', background='white').pack()
     priceinput.pack()
-    tk.Label(text='Price:')
+    tk.Label(frame, text='Price:', background='white').pack()
     priceoutput.pack()
     threading.Thread(target=add_and_calculate_power).start()
 
@@ -54,6 +54,6 @@ startbutton = tk.Button(frame, text='Start', padx=5, pady=5)
 startbutton.bind("<Button-1>", handle_click)
 startbutton.pack()
 
-tk.Label(frame, text='Starttime:').pack()
+tk.Label(frame, text='Starttime:', background='white').pack()
 
 root.mainloop()
